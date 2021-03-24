@@ -12,7 +12,7 @@ namespace Task8
 
         public bool IsExist()
         {
-            if (A < B && A != 0 && B != 0 && C != 0 && D != 0 && S() != 0)
+            if (A < B && A != 0 && B != 0 && C != 0 && D != 0 && !double.IsNaN(S()))
             {
                 return true;
             }
@@ -57,6 +57,8 @@ namespace Task8
             {
                 Console.WriteLine("Трапеция не существует");
             }
+
+            Console.ReadKey();
         }
     }
 }
